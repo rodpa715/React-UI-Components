@@ -5,6 +5,7 @@
 .user-info{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 .user-info p{
     margin: 0 3px;
