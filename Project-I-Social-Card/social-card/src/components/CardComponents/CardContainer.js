@@ -5,14 +5,16 @@ import CardContent from "./CardContent";
 
 function CardContainer({ imageSource, contents }) {
   return (
-    <div className="card-container">
-      <CardBanner alt={imageSource.alt} src={imageSource.src} />
-      <CardContent
-        heading={contents.heading}
-        text={contents.text}
-        source={contents.source}
-      />
-    </div>
+    <a href="https://reactjs.org">
+      <div className="card-container">
+        <CardBanner alt={imageSource.alt} src={imageSource.src} />
+        <CardContent
+          heading={contents.heading}
+          text={contents.text}
+          source={contents.source}
+        />
+      </div>
+    </a>
   );
 }
 
