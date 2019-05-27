@@ -1,1 +1,38 @@
 /* All styles for your header Components live here */
+.header-container{
+    display: flex;
+}
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
+.user-info p{
+    margin: 0 3px;
+}
+.header-container img{
+    height: 48px;
+    width: 48px;
+    margin: 10px;
+}
+.header-title{
+    display: flex;
+    align-items: baseline;
+    width: 50%;
+}
+.header-title *{
+    margin: 10px 3px;
+    white-space: nowrap;
+}
+.header-title h3{
+    font-size: 14px;
+}
+.header-title h4{
+    font-size: 13px;
+    font-weight: lighter;
+    color: grey;
+}
+.header-title span{
+    font-size: 13px;
+    font-weight: lighter;
+    color: grey;
+}
