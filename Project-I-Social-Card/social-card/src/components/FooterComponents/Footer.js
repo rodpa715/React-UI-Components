@@ -11,11 +11,11 @@ function FooterContainer() {
       <div className="icons comments" />
       <div className="retweet">
         <div className="icons" id="retweet" onClick={addOne} />
-        <span>{state.count}</span>
+        <span>{count}</span>
       </div>
       <div className="like">
         <div className="icons" id="like" onClick={addOne} />
-        <span>{state.count}</span>
+        <span>{count}</span>
       </div>
       <div className="icons send-dm" />
     </div>
