@@ -8,44 +8,51 @@ const operators = [
   {
     name: "divide",
     char: "÷",
-    operator: "/",
   },
   {
     name: "multiply",
     char: "x",
-    operator: "*",
   },
   {
     name: "subtract",
     char: "-",
-    operator: "-",
   },
   {
     name: "add",
     char: "+",
-    operator: "+",
   },
   {
     name: "execute",
     char: "=",
-    operator: "equals",
   }
 ];
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
+const operatorFunctions = {
+  divide: function (a, b) {return a / b},
+  multiply: function (a, b) {return a * b},
+  subtract: function (a, b) {return a - b},
+  add: function (a, b) {return a + b},
+  execute: (a,b) => console.log("sorry not yet worked at", a, b),
+}
+
 const App = () => {
-  const previousValue = 0;
+  let previousValue = 0;
   let [currentValue, updateValue] = useState(0);
 
   const addToDisplay = (e) => {
     updateValue(currentValue === 0 ? currentValue = e.target.dataset.id : currentValue + e.target.dataset.id)
-    console.log(currentValue)
+    console.log("current ",currentValue)
   }
 
   const clearDisplay = (e) => { updateValue(currentValue = 0) }
 
-  const operate = (e) => { console.log(e.target.className) }
+  const operate = (e) => {
+    previousValue = currentValue
+    let operation =  operatorFunctions[`${e.target.className}`]
+    updateValue(currentValue = operation(parseInt(previousValue), parseInt(currentValue)))
+   }
 
   return (
 
