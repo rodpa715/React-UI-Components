@@ -2,7 +2,7 @@ import React from "react";
 import "./Button.css";
 import NumberButton from './NumberButton'
 
-function KeypadComponent( {numbersArray, numbersFunction, clearFunction} ) {
+function NumpadComponent( {numbersArray, numbersFunction, clearFunction} ) {
   return (
     <div className="keypad-numbers">
       <div onClick={clearFunction} className="clear">clear</div>
@@ -13,4 +13,4 @@ function KeypadComponent( {numbersArray, numbersFunction, clearFunction} ) {
   );
 }
 
-export default KeypadComponent;
+export default NumpadComponent;

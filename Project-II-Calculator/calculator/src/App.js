@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import OperatorsComponent from './components/ButtonComponents/ActionButton';
-import KeypadComponent from './components/ButtonComponents/KeypadComponent';
+import NumpadComponent from './components/ButtonComponents/NumpadComponent';
 import DisplayComponent from './components/DisplayComponents/CalculatorDisplay'
 
 const operators = [
@@ -37,7 +37,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 const App = () => {
   const [value, updateValue] = useState(0);
 
-  const addToDisplay = () => {
+  const addToDisplay = (key) => {
     updateValue(value +1)
     console.log(value)
   }
@@ -50,7 +50,7 @@ const App = () => {
     <div className="calculator">
       <DisplayComponent />
       <div className="keypad">
-        <KeypadComponent clearFunction={clearDisplay} numbersFunction={addToDisplay} numbersArray={numbers}/>
+        <NumpadComponent clearFunction={clearDisplay} numbersFunction={addToDisplay} numbersArray={numbers}/>
         <OperatorsComponent operatorFunction={operate} operatorsArray={operators} />
       </div>
     </div>
