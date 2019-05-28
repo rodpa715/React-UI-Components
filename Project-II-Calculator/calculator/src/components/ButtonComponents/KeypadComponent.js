@@ -1,15 +1,13 @@
 import React from "react";
 import "./Button.css";
-import NumbersButton from './NumbersButton'
+import NumberButton from './NumberButton'
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-
-function KeypadComponent(props) {
+function KeypadComponent({numbersArray}) {
   return (
     <div className="keypad-numbers">
       <div className="clear">clear</div>
       <div className="numbers">
-        {numbers.map(number => <NumbersButton key={number} text={number}/>)}
+        {numbersArray.map(number => <NumberButton buttonStyle="number-button" key={number} text={number}/>)}
       </div>
     </div>
   );
