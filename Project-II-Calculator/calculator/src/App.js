@@ -35,20 +35,22 @@ const operators = [
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
 const App = () => {
-  const [value, updateValue] = useState(0);
+  const previousValue = 0;
+  let [currentValue, updateValue] = useState(0);
 
-  const addToDisplay = (key) => {
-    updateValue(value +1)
-    console.log(value)
+  const addToDisplay = (e) => {
+    updateValue(currentValue === 0 ? currentValue = e.target.dataset.id : currentValue + e.target.dataset.id)
+    console.log(currentValue)
   }
 
-  const clearDisplay = () => { console.log("clear") }
+  const clearDisplay = (e) => { console.log(e.target.className) }
 
-  const operate = () => { console.log("operator") }
+  const operate = (e) => { console.log(e.target.className) }
 
   return (
+
     <div className="calculator">
-      <DisplayComponent />
+      <DisplayComponent currentValue={currentValue} />
       <div className="keypad">
         <NumpadComponent clearFunction={clearDisplay} numbersFunction={addToDisplay} numbersArray={numbers}/>
         <OperatorsComponent operatorFunction={operate} operatorsArray={operators} />

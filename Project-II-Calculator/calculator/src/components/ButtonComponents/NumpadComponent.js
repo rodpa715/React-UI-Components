@@ -7,7 +7,7 @@ function NumpadComponent( {numbersArray, numbersFunction, clearFunction} ) {
     <div className="keypad-numbers">
       <div onClick={clearFunction} className="clear">clear</div>
       <div className="numbers">
-        {numbersArray.map(number => <NumberButton numbersFunction={numbersFunction} buttonStyle="number-button" key={number} text={number}/>)}
+        {numbersArray.map(number => <NumberButton data-id={number} numbersFunction={numbersFunction} buttonStyle="number-button" key={number} text={number}/>)}
       </div>
     </div>
   );
