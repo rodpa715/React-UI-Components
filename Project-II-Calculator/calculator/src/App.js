@@ -35,11 +35,18 @@ const operators = [
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
 const App = () => {
+  const [value, updateValue] = useState(0);
+
+  const addToDisplay = () => {
+    updateValue(value +1)
+    console.log(value)
+  }
+
   return (
     <div className="calculator">
       <DisplayComponent />
       <div className="keypad">
-        <KeypadComponent numbersArray={numbers}/>
+        <KeypadComponent callbackFunction={addToDisplay} numbersArray={numbers}/>
         <OperatorsComponent operatorsArray={operators} />
       </div>
     </div>
