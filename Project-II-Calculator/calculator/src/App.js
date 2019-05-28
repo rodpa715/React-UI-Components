@@ -6,9 +6,9 @@ import DisplayComponent from './components/DisplayComponents/CalculatorDisplay'
 
 const App = () => {
   return (
-    <div>
+    <div className="calculator">
       <DisplayComponent />
-      <div>
+      <div className="keypad">
         <KeypadComponent />
         <OperatorsComponent />
       </div>

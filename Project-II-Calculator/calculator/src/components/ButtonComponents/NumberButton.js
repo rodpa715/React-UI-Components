@@ -3,7 +3,7 @@ import './Button.css';
 
 function KeypadComponent() {
   return(
-    <div className="keypad">
+    <div className="keypad-numbers">
       <div className="clear">Clear</div>
       <div className="numbers">
         <div data-id="1">1</div>

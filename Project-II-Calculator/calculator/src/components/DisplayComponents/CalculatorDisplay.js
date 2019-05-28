@@ -4,7 +4,7 @@ import './Display.css';
 function DisplayComponent() {
   return(
     <div className="display">
-      <h1 className="numbers">0</h1>
+      <h1 className="display-numbers">0</h1>
     </div>
   )
 }
