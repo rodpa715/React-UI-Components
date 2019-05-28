@@ -6,8 +6,14 @@ import DisplayComponent from './components/DisplayComponents/CalculatorDisplay'
 
 const App = () => {
   return (
-    null
-  );
+    <div>
+      <DisplayComponent />
+      <div>
+        <KeypadComponent />
+        <OperatorsComponent />
+      </div>
+    </div>
+  )
 };
 
 export default App;
