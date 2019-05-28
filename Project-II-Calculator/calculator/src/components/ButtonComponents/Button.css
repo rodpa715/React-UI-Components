@@ -30,7 +30,7 @@
   width: 100%;
   height: 100%;
 }
-.numbers div{
+.number-button{
   font-weight: bold;
   width: 33.3%;
   display: flex;
@@ -38,7 +38,7 @@
   align-items: center;
 }
 .numbers div:last-child{
-  width: 100%;
+  flex-grow: 1;
 }
 .operators{
   display: flex;
