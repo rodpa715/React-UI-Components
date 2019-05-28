@@ -43,7 +43,7 @@ const App = () => {
     console.log(currentValue)
   }
 
-  const clearDisplay = (e) => { console.log(e.target.className) }
+  const clearDisplay = (e) => { updateValue(currentValue = 0) }
 
   const operate = (e) => { console.log(e.target.className) }
 
