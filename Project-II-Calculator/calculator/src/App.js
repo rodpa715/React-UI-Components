@@ -7,28 +7,32 @@ import DisplayComponent from './components/DisplayComponents/CalculatorDisplay'
 const operators = [
   {
     name: "divide",
-    char: "÷"
+    char: "÷",
+    operator: "/",
   },
   {
     name: "multiply",
-    char: "x"
+    char: "x",
+    operator: "*",
   },
   {
     name: "subtract",
-    char: "-"
+    char: "-",
+    operator: "-",
   },
   {
     name: "add",
-    char: "+"
+    char: "+",
+    operator: "+",
   },
   {
     name: "execute",
-    char: "="
+    char: "=",
+    operator: "equals",
   }
 ];
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-
 
 const App = () => {
   return (
