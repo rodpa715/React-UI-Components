@@ -42,12 +42,16 @@ const App = () => {
     console.log(value)
   }
 
+  const clearDisplay = () => { console.log("clear") }
+
+  const operate = () => { console.log("operator") }
+
   return (
     <div className="calculator">
       <DisplayComponent />
       <div className="keypad">
-        <KeypadComponent callbackFunction={addToDisplay} numbersArray={numbers}/>
-        <OperatorsComponent operatorsArray={operators} />
+        <KeypadComponent clearFunction={clearDisplay} numbersFunction={addToDisplay} numbersArray={numbers}/>
+        <OperatorsComponent operatorFunction={operate} operatorsArray={operators} />
       </div>
     </div>
   )

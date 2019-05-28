@@ -1,8 +1,8 @@
 import React from "react";
 
-function NumberButton({text, buttonStyle, callbackFunction}) {
+function NumberButton({text, buttonStyle, numbersFunction}) {
   return (
-      <div onClick={callbackFunction} key={text} className={buttonStyle}>{text}</div>
+      <div onClick={numbersFunction} key={text} className={buttonStyle}>{text}</div>
   );
 }
 
