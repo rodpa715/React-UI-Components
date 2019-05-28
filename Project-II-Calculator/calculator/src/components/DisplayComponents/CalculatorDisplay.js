@@ -1,7 +1,7 @@
 import React from 'react';
 import './Display.css';
 
-function displayComponent() {
+function DisplayComponent() {
   return(
     <div className="display">
       <h1 className="numbers">0</h1>
@@ -9,4 +9,4 @@ function displayComponent() {
   )
 }
 
-export default displayComponent;
+export default DisplayComponent;
