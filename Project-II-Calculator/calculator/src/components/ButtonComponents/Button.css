@@ -1,0 +1,54 @@
+.keypad{
+  height: 100%;
+  display: flex;
+}
+.keypad-numbers{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+}
+.keypad-numbers div{
+  cursor: pointer;
+  border: 0.1rem solid #979797;
+}
+.clear{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.numbers{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.numbers div{
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.numbers div:last-child{
+  width: 100%;
+}
+.operators{
+  display: flex;
+  flex-direction: column;
+  
+  width: 30%;
+}
+.operators div{
+  border: 0.1rem solid #979797;
+  background-color: #a01b1d;
+  color: white;
+  height: 20%;
+  width: 100%;
+  font-size: 4.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
