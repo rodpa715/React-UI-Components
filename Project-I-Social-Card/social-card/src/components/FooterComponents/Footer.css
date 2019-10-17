@@ -1,0 +1,36 @@
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    margin-left: 68px;
+    width: 45%;
+}
+
+.icons{
+    height: 28px;
+    width: 28px;
+    background-size: contain;
+    cursor: pointer;
+}
+.comments{
+    background-image: url("./images/comment.png");
+}
+
+.retweet{
+    display: flex;
+}
+#retweet{
+    background-image: url("./images/retweet.png");
+}
+.like{
+    display: flex;
+}
+#like{
+    background-image: url("./images/like.png");
+
+}
+
+.send-dm{
+    background-image: url("./images/send-dm.png");
+}
